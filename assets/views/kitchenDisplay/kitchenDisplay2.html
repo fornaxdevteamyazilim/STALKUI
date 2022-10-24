@@ -196,6 +196,7 @@
                             <div class="{{ngstyle}} row border-bottom col-lg-10 col-md-10 col-sm-10 col-xs-10 ng">
                                 <span class="text-bold margin-bottom-10 text-uppercase text-large">
                                     <span class="{{ngstyle}} text-large">{{:: items.Quantity  }} X {{:: items.Product|| items.Product.ProductPrototype + '(' + items.Product.Size+')'}}</span>
+                                    <span class="col-lg-12 text-indent" ng-if="items.Notes"> {{items.Notes}}</span>
                                 </span>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">

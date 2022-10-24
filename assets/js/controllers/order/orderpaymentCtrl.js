@@ -1,6 +1,6 @@
 ﻿app.factory("PaymentRestangular", function (Restangular) {
   return Restangular.withConfig(function (RestangularConfigurer) {
-    RestangularConfigurer.setBaseUrl("http://192.168.9.40:9065/api/");
+    RestangularConfigurer.setBaseUrl("http://192.168.9.41:9069/api/");
   });
 });
 
@@ -22,7 +22,8 @@ function orderpaymentCtrl(
   $location,
   $translate,
   userService,
-  ngnotifyService
+  ngnotifyService,
+  localStorageService
 ) {
   $rootScope.uService.EnterController("orderpaymentCtrl");
   $scope.order = Order;
@@ -206,6 +207,7 @@ function orderpaymentCtrl(
         ngnotifyService.ServerTime(),
         "yyyy-MM-dd HH:mm:ss"
       );
+      $scope.currentPayment.PosName=localStorageService.get('ClientName');
       Restangular.restangularizeElement(
         "",
         $scope.currentPayment,

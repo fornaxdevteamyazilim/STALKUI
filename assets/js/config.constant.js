@@ -11,29 +11,15 @@ app.constant('APP_MEDIAQUERY', {
 });
 app.value('NG_SETTING', {
     virtualKeybord: true,
-    piServiceBaseUri: 'http://192.168.9.40:9065',//PH
-    //apiServiceBaseUri: 'http://192.168.9.41:9069',//Stalk
-    //apiServiceBaseUri: 'http://192.168.104.153:9065 ',//KFC
-    //apiServiceBaseUri: 'http://10.0.0.245:9065',//MAROCCO
-    //apiServiceBaseUri: 'http://localhost:9065',//localhost
-    //apiServiceBaseUri: 'http://192.168.15.10:9065',//localhost
-    //apiServiceBaseUri: 'http://31.145.149.211:9063',//CALLCENTER
-    //apiServiceBaseUri: 'http://192.168.9.41:9069',//NEWGNUI 
+    apiServiceBaseUri: 'http://192.168.9.41:9069'    
 });
 app.value('ngAuthSettings', {    
-    apiServiceBaseUri: 'http://192.168.9.40:9065/',//PH
-    //apiServiceBaseUri: 'http://192.168.9.41:9069/',//Stalk
-    //apiServiceBaseUri: 'http://192.168.104.153:9065 /',//KFC
-    //apiServiceBaseUri: 'http://78.135.103.74:9065/',//ROPNGTEST
-    //apiServiceBaseUri: 'http://10.0.0.245:9065/',//MAROCCO
-    //apiServiceBaseUri: 'http://localhost:9065/',//localhost
-    //apiServiceBaseUri: 'http://192.168.15.10:9065/',//localhost
-    //apiServiceBaseUri: 'http://31.145.149.211:9063/',//CALLCENTER
-    //apiServiceBaseUri: 'http://192.168.9.41:9069/',//NEWGNUI 
+    apiServiceBaseUri: 'http://192.168.9.41:9069/',
     clientId: 'ropNGui',
     secret: 'Ab1234',
     apiAsiggned:false,
-    connected:false
+    connected:false,
+    dynamicApiEnable:true
 });
 app.constant('JS_REQUIRES', {
     //*** Scripts

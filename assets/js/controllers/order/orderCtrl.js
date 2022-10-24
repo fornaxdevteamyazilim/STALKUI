@@ -1,7 +1,7 @@
 ﻿
 app.factory('PaymentRestangular', function (Restangular) {
     return Restangular.withConfig(function (RestangularConfigurer) {
-        RestangularConfigurer.setBaseUrl('http://192.168.9.40:9065/api/');
+        RestangularConfigurer.setBaseUrl('http://192.168.9.41:9069/api/');
     });
 });
 
@@ -203,8 +203,8 @@ function orderCtrl($scope, $log, $filter, $timeout, $translate, $modal, SweetAle
                 //LC
                 //'<h2 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 center text-white text-capitalize" style="background-color:#FF6600; color:item;"> {{:: item.name}} <button class="btn btn-o pull-right ti-close" ng-click="cancel()"></button></h2>' +   
                 '<orderable ng-if="OrderID" item="' + ObjectID + '" order="OrderID" orderitem="' + oi + '"class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></orderable>' +
-                '</div>' +
-                ' <div class="panel center">' +
+                // '</div>' +
+                // ' <div class="panel center">' +
                 '</div>',
             controller: 'orderproductitemsCtrl',
             size: 'lg',
