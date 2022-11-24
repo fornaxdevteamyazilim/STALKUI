@@ -80,14 +80,26 @@
                                     <span class="fa fa-spin fa-spinner" ng-if="ShowObject == false"></span>
                                 </span>
                             </div>
+                        
                             <div class="col-md-12 margin-top-5" ng-if=":refresh:item.orders.length > 0">
                                 {{:timers:item.ActiveOrderTime}}
 
                             </div>
+                            <div>
+                                    
+                            <button style="top: 10px;" ng-click="RePrintOrder(item.orders[0].id)">
+                                <label for="">
+                                   Adisyon Yazdır
+                                </label>
+                               </button>
+                            </div>
+                        
                         </div>
+                      
                     </div>
                 </div>
             </tab>
+       
         </tabset>
     </div>    
 </div>

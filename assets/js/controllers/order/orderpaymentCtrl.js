@@ -52,7 +52,7 @@ function orderpaymentCtrl(
       $scope.translate();
     }
   );
-  $scope.BottonDblcilik = function () {};
+  $scope.BottonDblcilik = function () { };
   $scope.ok = function (text) {
     if ($scope.order.OrderTypeID != 0) $scope.ReqOrderAmount = null;
     $modalInstance.close(
@@ -207,7 +207,7 @@ function orderpaymentCtrl(
         ngnotifyService.ServerTime(),
         "yyyy-MM-dd HH:mm:ss"
       );
-      $scope.currentPayment.PosName=localStorageService.get('ClientName');
+      $scope.currentPayment.PosName = localStorageService.get('ClientName');
       Restangular.restangularizeElement(
         "",
         $scope.currentPayment,
@@ -386,9 +386,9 @@ function orderpaymentCtrl(
         Order: function () {
           return $scope.order;
         },
-        GastropayPayment:function () {
-            return $scope.GastropayPayment;
-          },
+        GastropayPayment: function () {
+          return $scope.GastropayPayment;
+        },
       },
     });
     modalInstance.result.then(function (item) {
@@ -518,7 +518,7 @@ function orderpaymentCtrl(
           };
           chrome.experimental.arcsp.sendJsonToPos(
             JSON.stringify(paymentObj),
-            function (pos_result) {}
+            function (pos_result) { }
           ); // sendJsonToPos finish
         }
       );
@@ -545,7 +545,7 @@ function orderpaymentCtrl(
       };
       chrome.experimental.arcsp.sendJsonToPos(
         JSON.stringify(lastPaymentObj),
-        function (pos_result) {}
+        function (pos_result) { }
       );
     }
   };
@@ -556,7 +556,7 @@ function orderpaymentCtrl(
     };
     chrome.experimental.arcsp.sendJsonToPos(
       JSON.stringify(PaymentObj),
-      function (pos_result) {}
+      function (pos_result) { }
     );
   };
   //**********//********** // ********** // ********** // ********** // **********// BEKO //**********//********** // ********** // ********** // ********** //

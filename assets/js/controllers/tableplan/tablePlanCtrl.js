@@ -217,6 +217,15 @@ function tablePlanCtrl($scope, $log, $modal, Restangular, ngTableParams, SweetAl
             });
         }
     };
+        $scope.RePrintOrder = function (OrderID) {
+        Restangular.all('ordertools/PrintLabels').getList({
+            OrderID: OrderID,
+        }).then(function (_orderItems) {
+            toaster.pop('success', $translate.instant('yemeksepetifile.PrintedAgain'));
+        }, function (response) {
+            toaster.pop('error', $translate.instant('Server.ServerError'), response);
+        });
+    };
     $scope.OrderPaymentDeteails = function (data) {
         $scope.ShowObject = false;
         if (data.PaymentStatusID == 1) {
